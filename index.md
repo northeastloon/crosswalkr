@@ -13,6 +13,14 @@ variables consistently across files. Based on `renamefrom` and
 `encodefrom` [Stata commands written by Sally Hudson and
 team](https://github.com/slhudson/rename-and-encode).
 
+## CRAN
+
+Install the latest release version from CRAN with
+
+```{r}
+install.packages('crosswalkr')
+```
+
 ## GitHub
 
 Install the latest development version from Github with
