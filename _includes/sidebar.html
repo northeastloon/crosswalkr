@@ -1,0 +1,61 @@
+<div class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <h1>
+        <a href="{{ site.baseurl }}/">
+          {{ site.title }}
+        </a>
+      </h1>
+      <p class="lead">{{ site.description }}</p>
+    </div>
+
+    <nav class="sidebar-nav">
+      <a class="sidebar-nav-item{% if page.url == '/' %}
+		active{% endif %}"
+	 href="{{ site.baseurl }}/">
+	Home
+      </a>
+
+      <a class="sidebar-nav-item{% if page.url == '/usage/' %}
+		active{% endif %}"
+	 href="{{ site.baseurl }}/usage/">
+	Usage
+      </a>
+      <a class="sidebar-nav-subitem{% if page.url == '/usage/api/ %}
+		active{% endif %}"
+	 href="{{ site.baseurl }}/usage/api">
+	Set API key
+      </a>
+      <a class="sidebar-nav-subitem{% if page.url == '/usage/bookend/ %}
+		active{% endif %}"
+	 href="{{ site.baseurl }}/usage/bookend">
+	Initialize and Get
+      </a>
+      <a class="sidebar-nav-subitem{% if page.url == '/usage/subset/ %}
+		active{% endif %}"
+	 href="{{ site.baseurl }}/usage/subset">
+	Subsetting
+      </a>
+      <a class="sidebar-nav-subitem{% if page.url == '/usage/dictionary/ %}
+		active{% endif %}"
+	 href="{{ site.baseurl }}/usage/dictionary">
+	Data dictionary
+      </a>
+      <a class="sidebar-nav-subitem{% if page.url == '/usage/examples/ %}
+		active{% endif %}"
+	 href="{{ site.baseurl }}/usage/examples">
+	More examples
+      </a>
+      <a class="sidebar-nav-item{% if page.url == '/contact/' %}
+		active{% endif %}"
+	 href="{{ site.baseurl }}/contact/">
+	Contact
+      </a>
+      <a class="sidebar-nav-item" href="{{ site.github }}">
+	Currently v{{ site.version }} <i class="fa fa-github fa-2x"></i>
+      </a>
+
+    </nav>
+
+  </div>
+</div>
