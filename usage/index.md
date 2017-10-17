@@ -214,9 +214,12 @@ desired, labels. The `crosswalk` to join these files could be:
 
 To rename using the `renamefrom()` command:
 
-    df1 <- renamefrom(file_1, crosswalk, raw = file_1_raw, clean = clean, label = label)
-    df2 <- renamefrom(file_2, crosswalk, raw = file_2_raw, clean = clean, label = label)
-    df3 <- renamefrom(file_3, crosswalk, raw = file_3_raw, clean = clean, label = label)
+    df1 <- renamefrom(file_1, crosswalk, raw = file_1_raw, clean = clean, 
+	                  label = label)
+    df2 <- renamefrom(file_2, crosswalk, raw = file_2_raw, clean = clean, 
+					  label = label)
+    df3 <- renamefrom(file_3, crosswalk, raw = file_3_raw, clean = clean, 
+					  label = label)
 
     df <- rbind(df1, df2, df3)
     df
