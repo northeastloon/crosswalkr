@@ -3,6 +3,8 @@ layout: default
 title: vignette
 ---
 
+# Introduction to crosswalkr
+
 Researchers often must compile master data sets from a number of smaller
 data sets that are not consistent in terms of variable names or value
 encodings. This can be especially true for large administrative data
