@@ -231,11 +231,7 @@ Renaming
 
 To rename using the `renamefrom()` command:
 
-    df1 <- renamefrom(file_1,
-                      cw_file = crosswalk,
-                      raw = file_1_raw,
-                      clean = clean,
-                      label = label)
+    df1 <- renamefrom(file_1, cw_file = crosswalk, raw = file_1_raw, clean = clean, label = label)
     df2 <- renamefrom(file_2, cw_file = crosswalk, raw = file_2_raw, clean = clean, label = label)
     df3 <- renamefrom(file_3, cw_file = crosswalk, raw = file_3_raw, clean = clean, label = label)
 
@@ -346,10 +342,14 @@ The `renamefrom()` and `encodefrom()` functions can be combined in a
                 tbl_df() %>%
                 renamefrom(., crosswalk, file_1_raw, clean, label) %>%
                 mutate(stabbr = encodefrom(., stabbr, stcrosswalk, stabbr, stfips, stname)),
+                
+                ## append file 2
                 file_2 %>%
                 tbl_df() %>%
                 renamefrom(., crosswalk, file_2_raw, clean, label) %>%
                 mutate(stabbr = encodefrom(., stabbr, stcrosswalk, stfips, stfips, stname)),
+                
+                ## append file 3
                 file_3 %>%
                 tbl_df() %>%
                 renamefrom(., crosswalk, file_3_raw, clean, label) %>%
