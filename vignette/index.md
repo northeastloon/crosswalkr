@@ -1,9 +1,7 @@
 ---
 layout: default
-title: usage
+title: vignette
 ---
-
-# Introduction to crosswalkr
 
 Researchers often must compile master data sets from a number of smaller
 data sets that are not consistent in terms of variable names or value
@@ -12,9 +10,6 @@ sets that span multiple years and/or departments. Other times, teams of
 researchers must work together to maintain a master data set and it is
 important for replicability and future collaboration that the team rely
 on consistent naming and encoding conventions.
-
-Renaming
---------
 
 For example, let's say there are three flat files of student information
 that need to be merged into a single large data set for analysis.
@@ -164,7 +159,7 @@ example:
 The problem, of course, is there is a lot of room for error since the
 renaming process has to be repeated for each data frame.
 
-### Crosswalk
+### Using a crosswalk file
 
 Instead, it makes more sense to create a crosswalk data set that aligns
 old (or raw) column names with new (or clean) column names and, if
@@ -212,14 +207,35 @@ desired, labels. The `crosswalk` to join these files could be:
 </tbody>
 </table>
 
+The crosswalk file (`cw_file`) could be:
+
+1.  Data frame object already in memory  
+2.  A string with path and name (*e.g.*, `'./path/to/crosswalk.csv'`) of
+    a flat file of one of the following types:
+    1.  Comma separated (`*.csv`)  
+    2.  Tab separated (`*.tsv`)  
+    3.  Other delimited (`*.txt`) with `delimiter` option set to
+        delimiter string (*e.g.*, `delimiter = '|'`)  
+    4.  Excel (`*.xls` or `*.xlsx`) with `sheet` option set to sheet
+        number or string name (defaulting to the first sheet)  
+    5.  R data (`*.rdata`, `*.rda`, `*.rds`)  
+    6.  Stata data (`*.dta`)
+
+If given a string to the `cw_file` argument, `renamefrom()` and
+`encodefrom()` determine the type of file by its ending.
+
+Renaming
+--------
+
 To rename using the `renamefrom()` command:
 
-    df1 <- renamefrom(file_1, crosswalk, raw = file_1_raw, clean = clean, 
-	                  label = label)
-    df2 <- renamefrom(file_2, crosswalk, raw = file_2_raw, clean = clean, 
-	                  label = label)
-    df3 <- renamefrom(file_3, crosswalk, raw = file_3_raw, clean = clean, 
-	                  label = label)
+    df1 <- renamefrom(file_1,
+                      cw_file = crosswalk,
+                      raw = file_1_raw,
+                      clean = clean,
+                      label = label)
+    df2 <- renamefrom(file_2, cw_file = crosswalk, raw = file_2_raw, clean = clean, label = label)
+    df3 <- renamefrom(file_3, cw_file = crosswalk, raw = file_3_raw, clean = clean, label = label)
 
     df <- rbind(df1, df2, df3)
     df
@@ -286,8 +302,7 @@ whether the input data frame is a tibble.
 
 ### return factor
 
-    df1$state <- encodefrom(file_1, var = stat, stcrosswalk, raw = stabbr,
-                            clean = stfips, label = stname)
+    df1$state <- encodefrom(file_1, var = stat, stcrosswalk, raw = stabbr, clean = stfips, label = stname)
     df1
 
     ##   id last_name stabbr score    state
