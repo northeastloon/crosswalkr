@@ -140,9 +140,9 @@ a.sidebar-nav-subitem:focus {
   padding-bottom: 4rem;
 }
 
-@media (min-width: 55em) {
+@media (min-width: 60em) {
   .content {
-    max-width: 55rem;
+    max-width: 60rem;
     margin-left: 20rem;
     margin-right: 2rem;
   }
