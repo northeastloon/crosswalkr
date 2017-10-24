@@ -74,8 +74,7 @@ df$state2 <- encodefrom(df, state, cw, stname, stfips, stabbr)
 df_tbl$state2 <- encodefrom(df_tbl, state, cw, stname, stfips, stabbr)
 
 ## ...override to encode as factor anyway
-df_tbl$state3 <- encodefrom(df_tbl, state, cw, stname, stfips, stabbr, 
-                            ignore_tibble = TRUE)
+df_tbl$state3 <- encodefrom(df_tbl, state, cw, stname, stfips, stabbr, ignore_tibble = TRUE)
 
 ## show with labels
 haven::as_factor(df_tbl)

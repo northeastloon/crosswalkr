@@ -316,8 +316,8 @@ whether the input data frame is a tibble.
 ### return labelled vector
 
     file_1_ <- file_1 %>% tbl_df()
-    df1$state <- encodefrom(file_1_, var = stat, stcrosswalk, raw = stabbr,
-                            clean = stfips, label = stname)
+    df1$state <- encodefrom(file_1_, var = stat, stcrosswalk, raw = stabbr, clean = stfips, label = stname)
+	
     as_factor(df1)
 
     ##   id last_name stabbr score    state
