@@ -8,6 +8,12 @@ title: Data
 The **crosswalkr** package includes a state-level crosswalk as an
 internal data set.
 
+## Usage
+
+```{r}
+library(crosswalkr)
+data(stcrosswalk)
+```
 ## Names
 
 |variable|description|  
@@ -20,7 +26,7 @@ internal data set.
 |`cendiv`|Census division number|  
 |`cendivnm`|Census division name|  
 
-## `stcrosswalk`
+## dataset: `stcrosswalk`
 
 |stfips|stabbr|stname|cenreg|cenregnm|cendiv|cendivnm|  
 |:----:|:----:|:-----|:----:|:-------|:----:|:-------|  
@@ -76,9 +82,3 @@ internal data set.
 |55|WI|Wisconsin|2|Midwest|3|East North Central|  
 |56|WY|Wyoming|4|West|8| Mountain|  
 
-## Usage
-
-```{r}
-library(crosswalkr)
-data(stcrosswalk)
-```
