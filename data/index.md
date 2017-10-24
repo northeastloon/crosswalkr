@@ -26,7 +26,7 @@ data(stcrosswalk)
 |`cendiv`|Census division number|  
 |`cendivnm`|Census division name|  
 
-## dataset: `stcrosswalk`
+## Dataset: `stcrosswalk`
 
 |stfips|stabbr|stname|cenreg|cenregnm|cendiv|cendivnm|  
 |:----:|:----:|:-----|:----:|:-------|:----:|:-------|  
