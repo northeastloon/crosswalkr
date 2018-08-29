@@ -2,7 +2,7 @@ title:            crosswalkr
 tagline:          'R package'
 description:      'Rename and Encode Data Frames Using External Crosswalk Files'
 github:		  https://github.com/btskinner/crosswalkr
-version:	  0.1.2
+version:	  0.2.0
 url:		  http://btskinner.me
 baseurl: 	  "/crosswalkr"
 

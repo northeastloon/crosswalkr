@@ -1,10 +1,3 @@
----
-layout: default
-title: vignette
----
-
-# Introduction to crosswalkr
-
 Researchers often must compile master data sets from a number of smaller
 data sets that are not consistent in terms of variable names or value
 encodings. This can be especially true for large administrative data
@@ -13,7 +6,7 @@ researchers must work together to maintain a master data set and it is
 important for replicability and future collaboration that the team rely
 on consistent naming and encoding conventions.
 
-For example, let's say there are three flat files of student information
+For example, let’s say there are three flat files of student information
 that need to be merged into a single large data set for analysis.
 
 ### File 1
@@ -21,30 +14,30 @@ that need to be merged into a single large data set for analysis.
 <table>
 <thead>
 <tr class="header">
-<th align="left">sid</th>
-<th align="left">lname</th>
-<th align="left">state</th>
-<th align="left">t_score</th>
+<th style="text-align: left;">sid</th>
+<th style="text-align: left;">lname</th>
+<th style="text-align: left;">state</th>
+<th style="text-align: left;">t_score</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left">1</td>
-<td align="left">Jackson</td>
-<td align="left">VA</td>
-<td align="left">74</td>
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">Jackson</td>
+<td style="text-align: left;">VA</td>
+<td style="text-align: left;">74</td>
 </tr>
 <tr class="even">
-<td align="left">2</td>
-<td align="left">Harrison</td>
-<td align="left">KY</td>
-<td align="left">86</td>
+<td style="text-align: left;">2</td>
+<td style="text-align: left;">Harrison</td>
+<td style="text-align: left;">KY</td>
+<td style="text-align: left;">86</td>
 </tr>
 <tr class="odd">
-<td align="left">3</td>
-<td align="left">Nixon</td>
-<td align="left">IL</td>
-<td align="left">78</td>
+<td style="text-align: left;">3</td>
+<td style="text-align: left;">Nixon</td>
+<td style="text-align: left;">IL</td>
+<td style="text-align: left;">78</td>
 </tr>
 </tbody>
 </table>
@@ -54,30 +47,30 @@ that need to be merged into a single large data set for analysis.
 <table>
 <thead>
 <tr class="header">
-<th align="left">stu_id</th>
-<th align="left">last_name</th>
-<th align="left">st</th>
-<th align="left">test_score</th>
+<th style="text-align: left;">stu_id</th>
+<th style="text-align: left;">last_name</th>
+<th style="text-align: left;">st</th>
+<th style="text-align: left;">test_score</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left">4</td>
-<td align="left">Washington</td>
-<td align="left">2</td>
-<td align="left">92</td>
+<td style="text-align: left;">4</td>
+<td style="text-align: left;">Washington</td>
+<td style="text-align: left;">35</td>
+<td style="text-align: left;">92</td>
 </tr>
 <tr class="even">
-<td align="left">5</td>
-<td align="left">Roosevelt</td>
-<td align="left">11</td>
-<td align="left">67</td>
+<td style="text-align: left;">5</td>
+<td style="text-align: left;">Roosevelt</td>
+<td style="text-align: left;">11</td>
+<td style="text-align: left;">67</td>
 </tr>
 <tr class="odd">
-<td align="left">6</td>
-<td align="left">Taylor</td>
-<td align="left">47</td>
-<td align="left">68</td>
+<td style="text-align: left;">6</td>
+<td style="text-align: left;">Taylor</td>
+<td style="text-align: left;">47</td>
+<td style="text-align: left;">68</td>
 </tr>
 </tbody>
 </table>
@@ -87,30 +80,30 @@ that need to be merged into a single large data set for analysis.
 <table>
 <thead>
 <tr class="header">
-<th align="left">s_id</th>
-<th align="left">name</th>
-<th align="left">sta</th>
-<th align="left">score</th>
+<th style="text-align: left;">s_id</th>
+<th style="text-align: left;">name</th>
+<th style="text-align: left;">sta</th>
+<th style="text-align: left;">score</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left">7</td>
-<td align="left">Tyler</td>
-<td align="left">North Dakota</td>
-<td align="left">91</td>
+<td style="text-align: left;">7</td>
+<td style="text-align: left;">Tyler</td>
+<td style="text-align: left;">North Dakota</td>
+<td style="text-align: left;">91</td>
 </tr>
 <tr class="even">
-<td align="left">8</td>
-<td align="left">Grant</td>
-<td align="left">South Dakota</td>
-<td align="left">82</td>
+<td style="text-align: left;">8</td>
+<td style="text-align: left;">Grant</td>
+<td style="text-align: left;">South Dakota</td>
+<td style="text-align: left;">82</td>
 </tr>
 <tr class="odd">
-<td align="left">9</td>
-<td align="left">Adams</td>
-<td align="left">Illinois</td>
-<td align="left">89</td>
+<td style="text-align: left;">9</td>
+<td style="text-align: left;">Adams</td>
+<td style="text-align: left;">Illinois</td>
+<td style="text-align: left;">89</td>
 </tr>
 </tbody>
 </table>
@@ -151,7 +144,7 @@ example:
     ## 1  1    Jackson           VA    74
     ## 2  2   Harrison           KY    86
     ## 3  3      Nixon           IL    78
-    ## 4  4 Washington            2    92
+    ## 4  4 Washington           35    92
     ## 5  5  Roosevelt           11    82
     ## 6  6     Taylor           47    89
     ## 7  7      Tyler North Dakota    91
@@ -170,41 +163,41 @@ desired, labels. The `crosswalk` to join these files could be:
 <table>
 <thead>
 <tr class="header">
-<th align="left">clean</th>
-<th align="left">label</th>
-<th align="left">file_1_raw</th>
-<th align="left">file_2_raw</th>
-<th align="left">file_3_raw</th>
+<th style="text-align: left;">clean</th>
+<th style="text-align: left;">label</th>
+<th style="text-align: left;">file_1_raw</th>
+<th style="text-align: left;">file_2_raw</th>
+<th style="text-align: left;">file_3_raw</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left">id</td>
-<td align="left">Student ID</td>
-<td align="left">sid</td>
-<td align="left">stu_id</td>
-<td align="left">s_id</td>
+<td style="text-align: left;">id</td>
+<td style="text-align: left;">Student ID</td>
+<td style="text-align: left;">sid</td>
+<td style="text-align: left;">stu_id</td>
+<td style="text-align: left;">s_id</td>
 </tr>
 <tr class="even">
-<td align="left">last_name</td>
-<td align="left">Student last name</td>
-<td align="left">lname</td>
-<td align="left">last_name</td>
-<td align="left">name</td>
+<td style="text-align: left;">last_name</td>
+<td style="text-align: left;">Student last name</td>
+<td style="text-align: left;">lname</td>
+<td style="text-align: left;">last_name</td>
+<td style="text-align: left;">name</td>
 </tr>
 <tr class="odd">
-<td align="left">stabbr</td>
-<td align="left">State abbreviation</td>
-<td align="left">stat</td>
-<td align="left">st</td>
-<td align="left">sta</td>
+<td style="text-align: left;">stabbr</td>
+<td style="text-align: left;">State abbreviation</td>
+<td style="text-align: left;">stat</td>
+<td style="text-align: left;">st</td>
+<td style="text-align: left;">sta</td>
 </tr>
 <tr class="even">
-<td align="left">score</td>
-<td align="left">Test score</td>
-<td align="left">t_score</td>
-<td align="left">test_score</td>
-<td align="left">score</td>
+<td style="text-align: left;">score</td>
+<td style="text-align: left;">Test score</td>
+<td style="text-align: left;">t_score</td>
+<td style="text-align: left;">test_score</td>
+<td style="text-align: left;">score</td>
 </tr>
 </tbody>
 </table>
@@ -213,15 +206,15 @@ The crosswalk file (`cw_file`) could be:
 
 1.  Data frame object already in memory  
 2.  A string with path and name (*e.g.*, `'./path/to/crosswalk.csv'`) of
-    a flat file of one of the following types:
-    1.  Comma separated (`*.csv`)  
-    2.  Tab separated (`*.tsv`)  
-    3.  Other delimited (`*.txt`) with `delimiter` option set to
-        delimiter string (*e.g.*, `delimiter = '|'`)  
-    4.  Excel (`*.xls` or `*.xlsx`) with `sheet` option set to sheet
-        number or string name (defaulting to the first sheet)  
-    5.  R data (`*.rdata`, `*.rda`, `*.rds`)  
-    6.  Stata data (`*.dta`)
+    a flat file of one of the following types:  
+    1. Comma separated (`*.csv`)  
+    2. Tab separated (`*.tsv`)  
+    3. Other delimited (`*.txt`) with `delimiter` option set to
+    delimiter string (*e.g.*, `delimiter = '|'`)  
+    4. Excel (`*.xls` or `*.xlsx`) with `sheet` option set to sheet
+    number or string name (defaulting to the first sheet)  
+    5. R data (`*.rdata`, `*.rda`, `*.rds`)  
+    6. Stata data (`*.dta`)
 
 If given a string to the `cw_file` argument, `renamefrom()` and
 `encodefrom()` determine the type of file by its ending.
@@ -242,7 +235,7 @@ To rename using the `renamefrom()` command:
     ## 1  1    Jackson           VA    74
     ## 2  2   Harrison           KY    86
     ## 3  3      Nixon           IL    78
-    ## 4  4 Washington            2    92
+    ## 4  4 Washington           35    92
     ## 5  5  Roosevelt           11    82
     ## 6  6     Taylor           47    89
     ## 7  7      Tyler North Dakota    91
@@ -279,17 +272,22 @@ for encoding these values could be used. The `crosswalkr` package
 includes a state-level crosswalk, `stcrosswalk`:
 
     data(stcrosswalk)
-    head(stcrosswalk)
+    stcrosswalk
 
-    ## # A tibble: 6 x 7
-    ##   stfips stabbr     stname cenreg cenregnm cendiv           cendivnm
-    ##    <int>  <chr>      <chr>  <int>    <chr>  <int>              <chr>
-    ## 1      1     AL    Alabama      3    South      6 East South Central
-    ## 2      2     AK     Alaska      4     West      9            Pacific
-    ## 3      4     AZ    Arizona      4     West      8           Mountain
-    ## 4      5     AR   Arkansas      3    South      7 West South Central
-    ## 5      6     CA California      4     West      9            Pacific
-    ## 6      8     CO   Colorado      4     West      8           Mountain
+    ## # A tibble: 51 x 7
+    ##    stfips stabbr stname            cenreg cenregnm  cendiv cendivnm       
+    ##     <int> <chr>  <chr>              <int> <chr>      <int> <chr>          
+    ##  1      1 AL     Alabama                3 South          6 East South Cen…
+    ##  2      2 AK     Alaska                 4 West           9 Pacific        
+    ##  3      4 AZ     Arizona                4 West           8 Mountain       
+    ##  4      5 AR     Arkansas               3 South          7 West South Cen…
+    ##  5      6 CA     California             4 West           9 Pacific        
+    ##  6      8 CO     Colorado               4 West           8 Mountain       
+    ##  7      9 CT     Connecticut            1 Northeast      1 New England    
+    ##  8     10 DE     Delaware               3 South          5 South Atlantic 
+    ##  9     11 DC     District of Colu…      3 South          5 South Atlantic 
+    ## 10     12 FL     Florida                3 South          5 South Atlantic 
+    ## # ... with 41 more rows
 
 The `encodefrom()` function works much like `renamefrom()`. The only
 difference is that a vector of encoded values is returned that can be
@@ -298,7 +296,7 @@ added to an existing dataframe.
 `encodefrom()` returns either base R factors or labels depending on
 whether the input data frame is a tibble.
 
-### return factor
+#### factor
 
     df1$state <- encodefrom(file_1, var = stat, stcrosswalk, raw = stabbr, clean = stfips, label = stname)
     df1
@@ -313,11 +311,11 @@ whether the input data frame is a tibble.
     ##          id   last_name      stabbr       score       state 
     ## "character" "character" "character" "character"    "factor"
 
-### return labelled vector
+#### labelled vector
 
     file_1_ <- file_1 %>% tbl_df()
-    df1$state <- encodefrom(file_1_, var = stat, stcrosswalk, raw = stabbr, clean = stfips, label = stname)
-	
+    df1$state <- encodefrom(file_1_, var = stat, stcrosswalk, raw = stabbr,
+                            clean = stfips, label = stname)
     as_factor(df1)
 
     ##   id last_name stabbr score    state
@@ -342,13 +340,13 @@ The `renamefrom()` and `encodefrom()` functions can be combined in a
                 tbl_df() %>%
                 renamefrom(., crosswalk, file_1_raw, clean, label) %>%
                 mutate(stabbr = encodefrom(., stabbr, stcrosswalk, stabbr, stfips, stname)),
-                
+
                 ## append file 2
                 file_2 %>%
                 tbl_df() %>%
                 renamefrom(., crosswalk, file_2_raw, clean, label) %>%
                 mutate(stabbr = encodefrom(., stabbr, stcrosswalk, stfips, stfips, stname)),
-                
+
                 ## append file 3
                 file_3 %>%
                 tbl_df() %>%
@@ -358,29 +356,29 @@ The `renamefrom()` and `encodefrom()` functions can be combined in a
     df
 
     ## # A tibble: 9 x 4
-    ##      id  last_name    stabbr score
-    ##   <chr>      <chr> <chr+lbl> <chr>
-    ## 1     1    Jackson        51    74
-    ## 2     2   Harrison        21    86
-    ## 3     3      Nixon        17    78
-    ## 4     4 Washington         2    92
-    ## 5     5  Roosevelt        11    82
-    ## 6     6     Taylor        47    89
-    ## 7     7      Tyler        38    91
-    ## 8     8      Grant        46    82
-    ## 9     9      Adams        17    89
+    ##   id    last_name  stabbr    score
+    ##   <chr> <chr>      <chr+lbl> <chr>
+    ## 1 1     Jackson    51        74   
+    ## 2 2     Harrison   21        86   
+    ## 3 3     Nixon      17        78   
+    ## 4 4     Washington 35        92   
+    ## 5 5     Roosevelt  11        82   
+    ## 6 6     Taylor     47        89   
+    ## 7 7     Tyler      38        91   
+    ## 8 8     Grant      46        82   
+    ## 9 9     Adams      17        89
 
     as_factor(df)
 
     ## # A tibble: 9 x 4
-    ##      id  last_name               stabbr score
-    ##   <chr>      <chr>               <fctr> <chr>
-    ## 1     1    Jackson             Virginia    74
-    ## 2     2   Harrison             Kentucky    86
-    ## 3     3      Nixon             Illinois    78
-    ## 4     4 Washington               Alaska    92
-    ## 5     5  Roosevelt District of Columbia    82
-    ## 6     6     Taylor            Tennessee    89
-    ## 7     7      Tyler         North Dakota    91
-    ## 8     8      Grant         South Dakota    82
-    ## 9     9      Adams             Illinois    89
+    ##   id    last_name  stabbr               score
+    ##   <chr> <chr>      <fct>                <chr>
+    ## 1 1     Jackson    Virginia             74   
+    ## 2 2     Harrison   Kentucky             86   
+    ## 3 3     Nixon      Illinois             78   
+    ## 4 4     Washington New Mexico           92   
+    ## 5 5     Roosevelt  District of Columbia 82   
+    ## 6 6     Taylor     Tennessee            89   
+    ## 7 7     Tyler      North Dakota         91   
+    ## 8 8     Grant      South Dakota         82   
+    ## 9 9     Adams      Illinois             89
